@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.zhangtao.phonesafe.GuideActivity">
+    <!--在V4的支持库中引用viewpager
+    1、是ViewGroup的一个子类
+    2、实现水平滑动的效果-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/guide_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
+    <Button
+        android:id="@+id/guide_btn"
+        android:layout_width="135dp"
+        android:layout_height="45dp"
+        android:background="@drawable/guide_btn_select"
+        android:text="@string/guide_start_btn_string"
+        android:textColor="@color/guide_btn_color_selector"
+        android:gravity="center"
+        android:visibility="gone"
+        android:onClick="enterSystem"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="55dp"/>
+
+</RelativeLayout>

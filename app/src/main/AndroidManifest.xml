@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.zhangtao.phonesafe">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!--读取手机章台的权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!--获取系统应道完成事件-->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <!--发短信的权限-->
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".WelcomeActivity">
+        </activity>
+        <activity android:name=".GuideActivity"/>
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/activity_splash"/>
+        <!-- singleTask:单任务模式 -->
+        <activity
+            android:name=".HomeActivity"
+            android:label="手机卫士"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".SettingActivity"></activity>
+        <activity android:name=".LostFindActivity"></activity>
+        <activity android:name=".Setup1Activity"></activity>
+        <activity android:name=".Setup2Activity"></activity>
+        <activity android:name=".Setup3Activity"></activity>
+        <activity android:name=".Setup4Activity"></activity>
+
+
+        <!--注册广播接收器 -->
+        <receiver android:name=".receiver.BootCompleteReceiver">
+            <!--订阅手机系统引导完成的事件 -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <!--<TextView-->
+    <!--style="@style/TitleBarStyle"-->
+    <!--android:text="2 手机卡绑定 "/>-->
+    <include layout="@layout/title_bar"></include>
+
+    <CheckBox
+        android:id="@+id/cb_setup4_protect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开启手机防盗"/>
+
+    <LinearLayout
+        android:id="@+id/lly_dot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_online"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/phone"
+            />
+
+        <Button
+            android:id="@+id/btn_next"
+            style="@style/DownSetupButtonStyle"
+            android:drawableRight="@drawable/btn_circle_dark"
+            android:text="设置完成"/>
+
+        <Button
+            android:id="@+id/btn_pre"
+            style="@style/UpSetupButtonStyle"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
